@@ -6,7 +6,7 @@ $.getJSON( "assets/words.json", function( data ) {
 	titles = Object.keys(words);
 
 	//Init Words
-	for (var i = 0; i < 400; i++) {
+	for (var i = 0; i < 500; i++) {
 		table.push([genWord(),"","",0,i]);
 	}
 	console.log(table);
