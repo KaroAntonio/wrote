@@ -34,8 +34,6 @@ a {
 }
 
 .element:hover {
-	background-color: black;
-	font-weight: bold;
 }
 
 .element .number {

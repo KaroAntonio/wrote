@@ -6,7 +6,7 @@ $.getJSON( "assets/words.json", function( data ) {
 	titles = Object.keys(words);
 
 	//Init Words
-	for (var i = 0; i < 500; i++) {
+	for (var i = 0; i < 300; i++) {
 		table.push([genWord(),"","",0,i]);
 	}
 	console.log(table);
@@ -187,13 +187,21 @@ function onWindowResize() {
 
 }
 
+$(window).mousemove(function(e) {
+	groups[0].rotation.x += 0.01;
+	groups[1].rotation.y += 0.01;
+	groups[2].rotation.z += 0.01;
+
+    })
+
+
 function animate() {
 
 	requestAnimationFrame( animate );
 
-	groups[0].rotation.x += 0.005;
-	groups[1].rotation.y += 0.005;
-	groups[2].rotation.z += 0.005;
+	groups[0].rotation.x += 0.0005;
+	groups[1].rotation.y += 0.0005;
+	groups[2].rotation.z += 0.0005;
 
 	TWEEN.update();
 	controls.update();
